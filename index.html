@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Name Replacer</title>
+</head>
 <body>
 
 <p id="text">
-    <p id=”text”>
-
-            Once upon a time there were 2 people named John and Annie. They had been in love for a long time now, but
+    Once upon a time there were 2 people named John and Annie. They had been in love for a long time now, but
             they wanted to make it official by having sex. The day before, they had purchased honey packets, condoms,
             and oil to enhance their experience. When they were ready, they both went into John's bedroom, locked the
             door and stripped. John put on the condom and took a honey packet, then he oiled up Annie. They had finally
@@ -29,8 +30,6 @@
             stop though; He wanted more. He then went crazy. Thrusting her every second, he filled her pussy with thick,
             white cum, filling it up. Annie loudly moaned and started
 
-            
-        </p>
 </p>
 
 <div>
@@ -47,19 +46,17 @@
 
 <script>
 const text = document.getElementById("text");
-
-const boy = "John";
-const girl = "Annie";
+const originalText = text.innerText;
 
 const boyBox = document.getElementById("boy");
 const girlBox = document.getElementById("girl");
 const button = document.getElementById("btn");
 
 button.addEventListener("click", () => {
-    let result = text.innerText;
+    let result = originalText;
 
-    result = result.replaceAll(boy, boyBox.value);
-    result = result.replaceAll(girl, girlBox.value);
+    result = result.replaceAll("John", boyBox.value);
+    result = result.replaceAll("Annie", girlBox.value);
 
     text.innerText = result;
 });
@@ -67,4 +64,3 @@ button.addEventListener("click", () => {
 
 </body>
 </html>
-
