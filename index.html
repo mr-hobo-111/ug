@@ -1,9 +1,9 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
-    <body><doctype html="">
+<body>
 
-    
-        <p>
+<p id="text">
+    <p id=”text”>
 
             Once upon a time there were 2 people named John and Annie. They had been in love for a long time now, but
             they wanted to make it official by having sex. The day before, they had purchased honey packets, condoms,
@@ -31,22 +31,40 @@
 
             
         </p>
-    
+</p>
 
+<div>
+    <p>boy</p>
+    <input type="text" id="boy">
+</div>
 
+<button id="btn">SET</button>
 
-</doctype>
-    <div>
-        <p>boy</p>
-        <input type="text">
+<div style="margin-top:20px">
+    <p>girl</p>
+    <input type="text" id="girl">
+</div>
 
-    </div>
-    <div style="margin-top: 20px"><p>girl</p>
-        
-        <input type="text">
-    </div>
-    
+<script>
+const text = document.getElementById("text");
+
+const boy = "John";
+const girl = "Annie";
+
+const boyBox = document.getElementById("boy");
+const girlBox = document.getElementById("girl");
+const button = document.getElementById("btn");
+
+button.addEventListener("click", () => {
+    let result = text.innerText;
+
+    result = result.replaceAll(boy, boyBox.value);
+    result = result.replaceAll(girl, girlBox.value);
+
+    text.innerText = result;
+});
+</script>
+
 </body>
 </html>
-
 
